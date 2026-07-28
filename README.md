@@ -39,4 +39,3 @@ Saves developer time.
 Maintains standardized documentation.
 Improves project onboarding.
 Keeps documentation synchronized with the codebase.
-Enhances collaboration and maintainability.
