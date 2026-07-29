@@ -9,12 +9,10 @@ Produces project summaries and feature descriptions.
 Updates documentation when the code changes.
 Reduces manual documentation effort and improves consistency.
 
-Testing
 
 Verify the generator produces a valid README.md.
 Check that project name, description, installation, usage, and dependencies are correctly extracted.
-Ensure code examples and commands are accurate.
-Test with different project structures and programming languages.
+Ensure code examples and commands are accurate
 Validate error handling for missing or incomplete files.
 
 Expected Output
