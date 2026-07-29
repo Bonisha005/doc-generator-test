@@ -3,9 +3,8 @@ Document Generator – Test README Summary
 
 The Document Generator is an AI-powered tool that automatically creates project documentation from source code and project files. It analyzes the project structure, codebase, comments, and configuration files to generate consistent and well-organized documentation.
 
-Automatically generates README.md files.
+Automatically generates README.md files
 Creates API and module documentation.
-Produces project summaries and feature descriptions.
 Updates documentation when the code changes.
 Reduces manual documentation effort and improves consistency.
 
