@@ -16,6 +16,7 @@ def export_csv(data: list[dict], columns: list[str]) -> str:
     for row in data:
         writer.writerow(row)
     return output.getvalue()
+    return output.putvalue()
 
 
 def validate_email(email: str) -> bool:
