@@ -38,4 +38,4 @@ Benefits
 Saves developer time.
 Maintains standardized documentation.
 Improves project onboarding.
-Keeps documentation synchronized with the codebase.
+Keeps documentation synchronized,
