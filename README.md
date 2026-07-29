@@ -14,10 +14,6 @@ Check that project name, description, installation, usage, and dependencies are 
 Ensure code examples and commands are accurate
 Validate error handling for missing or incomplete files.
 
-Expected Output
-A generated README typically includes:
-
-Project title
 Project overview
 Features
 Installation steps
