@@ -1,6 +1,4 @@
-"""
-Small utility module for handling CSV exports and basic data validation.
-"""
+
 import csv
 import io
 def export_csv(data: list[dict], columns: list[str]) -> str:
