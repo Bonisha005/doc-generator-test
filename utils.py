@@ -2,8 +2,6 @@
 import csv
 import io
 def export_csv(data: list[dict], columns: list[str]) -> str:
-
-    imooorcf fcrhb kjvtfxgunjcesxg jhvcexmjkbvdfr j
     """
     Converts a list of dicts into CSV text using the given column order.
     Missing keys in a row are written as empty cells.
