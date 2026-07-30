@@ -8,9 +8,7 @@ def export_csv(data: list[dict], columns: list[str]) -> str:
     """
     Converts a list of dicts into CSV text using the given column order.
     Missing keys in a row are written as empty cells.
-    """
-    output = io.StringIO()
-    writer = csv.DictWriter(output, fieldnames=columns, extrasaction="ignore")
+    """action="ignore")
     writer.writeheader()
     for row in data:
         writer.writerow(row)
