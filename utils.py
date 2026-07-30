@@ -1,17 +1,22 @@
-import module 2jbjbjldfjbkjf
+"""
+Small utility module for handling CSV exports, basic data validation,
+list chunking, and dict merging.
+"""
 import csv
 import io
+
+
 def export_csv(data: list[dict], columns: list[str]) -> str:
-    """vctrxrctfvyvtrcrtdcgfcrexbuyt4esdh
+    """
     Converts a list of dicts into CSV text using the given column order.
-    Missing keys in a row arwdwefviwen'fihpg8wegc,.wE]
-    FWWKJI UFBKLENBF YUVORFwritten as empty cells.
-    """action="ignore")
+    Missing keys in a row are written as empty cells.
+    """
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=columns, extrasaction="ignore")
     writer.writeheader()
     for row in data:
         writer.writerow(row)
     return output.getvalue()
-    return output.putvalue()
 
 
 def validate_email(email: str) -> bool:
@@ -33,3 +38,26 @@ def chunk_list(items: list, size: int) -> list[list]:
     if size <= 0:
         raise ValueError("size must be positive")
     return [items[i:i + size] for i in range(0, len(items), size)]
+
+
+def merge_dicts(base: dict, overrides: dict, deep: bool = False) -> dict:
+    """
+    Merges `overrides` into `base` and returns a new dict (does not mutate
+    either input). By default this is a shallow merge -- overrides simply
+    replace matching top-level keys. If `deep=True`, nested dict values are
+    merged recursively instead of being replaced wholesale.
+
+    Example:
+        merge_dicts({"a": 1, "b": {"x": 1}}, {"b": {"y": 2}}, deep=True)
+        -> {"a": 1, "b": {"x": 1, "y": 2}}
+
+        merge_dicts({"a": 1, "b": {"x": 1}}, {"b": {"y": 2}}, deep=False)
+        -> {"a": 1, "b": {"y": 2}}
+    """
+    result = dict(base)
+    for key, value in overrides.items():
+        if deep and isinstance(value, dict) and isinstance(result.get(key), dict):
+            result[key] = merge_dicts(result[key], value, deep=True)
+        else:
+            result[key] = value
+    return result
