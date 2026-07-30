@@ -4,7 +4,7 @@ Small utility module for handling CSV exports and basic data validation.
 import csv
 import io
 import input
-
+import fifi
 def export_csv(data: list[dict], columns: list[str]) -> str:
     """
     Converts a list of dicts into CSV text using the given column order.
