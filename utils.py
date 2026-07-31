@@ -2,7 +2,7 @@
 Small utility module for handling CSV exports, basic data validation,
 list chunking, and dict merging.
 """
-import csvimport utils.py
+import csvimport
 
 import io
 
